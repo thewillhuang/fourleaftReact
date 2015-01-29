@@ -1,9 +1,5 @@
 'use strict';
-require('bootstrap');
 var React = require('react');
-var Grid  = require('react-bootstrap/Grid');
-var Row = require('react-bootstrap/Row');
-var Col = require('react-bootstrap/Col');
 var data = require('../data/data.json');
 
 var RenderConnectionList = React.createClass({
@@ -15,9 +11,9 @@ var RenderConnectionList = React.createClass({
         );
     });
     return (
-      <Grid>
+      <div>
       {renderRow}
-      </Grid>
+      </div>
     );
   }
 
@@ -27,10 +23,10 @@ var RenderArtistRow = React.createClass({
 
   render: function() {
     return (
-      <Row>
+      <div>
       {this.props.row}
       {console.log(this.props.row)}
-      </Row>
+      </div>
     );
   }
 
