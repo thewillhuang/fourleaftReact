@@ -5,6 +5,8 @@ var gulp = './gulp';
 var compression = require('compression');
 var neat = require('node-neat').includePaths;
 
+console.log(neat);
+
 module.exports = {
   browserSync: {
     server: {
