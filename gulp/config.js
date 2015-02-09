@@ -5,8 +5,6 @@ var gulp = './gulp';
 var compression = require('compression');
 var neat = require('node-neat').includePaths;
 
-console.log(neat);
-
 module.exports = {
   browserSync: {
     server: {
@@ -31,7 +29,7 @@ module.exports = {
     }
   },
   copy: {
-    src: [src + '/**/*', '!' + src + '/{img,img/**/*}', '!' + src + '/{js,js/**/*}', '!' + src + '/{css,css/**/*}'], // '!' must be a string
+    src: [src + '/**/*', '!' + src + '/{img,img/**/*}', '!' + src + '/{js,js/**/*}', '!' + src + '/{css,css/**/*}', '!' + src + '/*.html'], // '!' must be a string
     dest: dest
   },
   gulp: {
@@ -66,7 +64,7 @@ module.exports = {
     //   // external: ['jquery', 'underscore']
     // },
     {
-      entries: src + '/js/root.jsx',
+      entries: src + '/js/profile.js',
       dest: dest,
       outputName: 'bundle.js'
     }]
