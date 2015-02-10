@@ -9,7 +9,7 @@ if (ENV === 'development') a11y();
 var RenderProfile = React.createClass({
 
   render: function() {
-    console.log(this.props.data);
+    // console.log(this.props.data);
     var daw;
     if (this.props.data.daw === null) {
       daw = 'no daw';
@@ -37,8 +37,10 @@ var RenderProfile = React.createClass({
     }
 
     return (
-      <div>
+      <div className="content-container">
 
+      <div className ="middle-box">
+      middle box
         <div className="profile-photo">
           <img alt="profile-photo" src={this.props.data.img} />
         </div>
@@ -46,6 +48,11 @@ var RenderProfile = React.createClass({
         <div className="profile-name">
           {this.props.data.display_name}
         </div>
+
+        <div className="profile-collabs">
+          75 collabs
+        </div>
+
 
         <div className="profile-info-box">
           <div className="profile-role">
@@ -65,13 +72,22 @@ var RenderProfile = React.createClass({
           </div>
         </div>
 
+        <div className="profile-badges">
+          badges
+        </div>
+
+      </div>
+
+        <div className ="bottom-box">
+          bottom box
+        </div>
+
       </div>
       );
   }
 
 });
 
-React.render(<RenderProfile data={data[12]}/>, document.getElementById('reactRoot'));
-
+React.render(<RenderProfile data={data[10]}/>, document.getElementById('reactRoot'));
 
 module.exports = RenderProfile;

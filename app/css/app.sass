@@ -3,6 +3,67 @@
 @import "./base";
 @import "neat";
 
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+/* Styles */
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen
+and (min-width : 321px) {
+/* Styles */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen
+and (max-width : 320px) {
+/* Styles */
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px) {
+/* Styles */
+}
+
+/* iPads (landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+/* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+/* Styles */
+}
+
+/* Desktops and laptops ----------- */
+@media only screen
+and (min-width : 1224px) {
+/* Styles */
+}
+
+/* Large screens ----------- */
+@media only screen
+and (min-width : 1824px) {
+/* Styles */
+}
+
+/* iPhone 4 ----------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+/* Styles */
+}
+
 .top-container{
   height: 50%;
   background-color: gray;
@@ -23,24 +84,67 @@
   width:100%;
 }
 
-.profile-photo{
-  position:absolute;
-  top:43%;
-  left:15.4%;
-  width: 130px;
-  margin: 1px;
+.content-container{
+  @include outer-container;
 }
 
-.profile-name{
+.middle-box{
+  @include span-columns(12);
+  border-style: dashed;
+  border-width: 1px;
   position:absolute;
-  top:43%;
-  left:25%;
+  top:40%;
+  height: 25%
+}
+
+.profile-photo{
+  border-style: dashed;
+  border-width: 1px;
+  position:absolute;
+  @include span-columns(2 of 12);
+  @include shift(0.75);
+}
+
+.profile-name {
+  border-style: dashed;
+  border-width: 1px;
+  position:absolute;
+  @include span-columns(3.2 of 12);
+  @include shift(2.5);
+  top:1%;
+}
+.profile-collabs {
+  border-style: dashed;
+  border-width: 1px;
+  position:absolute;
+  @include span-columns(3.2 of 12);
+  @include shift(2.5);
+  top:10%;
+}
+.profile-badges {
+  border-style: dashed;
+  border-width: 1px;
+  position:absolute;
+  top: 1%;
+  @include span-columns(6.5 of 12);
+  @include shift(5.5);
 }
 
 .profile-info-box{
+  border-style: dashed;
+  border-width: 1px;
   position:absolute;
-  top:52%;
-  left:25%;
+  top: 40%;
+  @include span-columns(4 of 12);
+  @include shift(2.5);
+}
+
+.bottom-box{
+  @include span-columns(12);
+  border-style: dashed;
+  border-width: 1px;
+  position:absolute;
+  top: 66%;
 }
 
 header.navigation {
